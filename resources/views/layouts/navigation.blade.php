@@ -15,6 +15,18 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.index') || request()->routeIs('customers.show') || request()->routeIs('customers.create') || request()->routeIs('customers.edit')">
+                        {{ __('Customers') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('summons.index')" :active="request()->routeIs('summons.index') || request()->routeIs('summons.show') || request()->routeIs('summons.create') || request()->routeIs('summons.edit')">
+                        {{ __('Summons') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('violations.index')" :active="request()->routeIs('violations.index') || request()->routeIs('violations.show') || request()->routeIs('violations.create') || request()->routeIs('violations.edit')">
+                        {{ __('Violations') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('reports.summons')" :active="request()->routeIs('reports.summons') || request()->routeIs('reports.payments')">
+                        {{ __('Reports') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -69,6 +81,18 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.index') || request()->routeIs('customers.show') || request()->routeIs('customers.create') || request()->routeIs('customers.edit')">
+                {{ __('Customers') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('summons.index')" :active="request()->routeIs('summons.index') || request()->routeIs('summons.show') || request()->routeIs('summons.create') || request()->routeIs('summons.edit')">
+                {{ __('Summons') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('violations.index')" :active="request()->routeIs('violations.index') || request()->routeIs('violations.show') || request()->routeIs('violations.create') || request()->routeIs('violations.edit')">
+                {{ __('Violations') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('reports.summons')" :active="request()->routeIs('reports.summons') || request()->routeIs('reports.payments')">
+                {{ __('Reports') }}
             </x-responsive-nav-link>
         </div>
 
